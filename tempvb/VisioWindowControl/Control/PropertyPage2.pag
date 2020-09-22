@@ -1,0 +1,36 @@
+VERSION 5.00
+Begin VB.PropertyPage PropertyPage2 
+   Caption         =   "Focus Effects Code"
+   ClientHeight    =   3870
+   ClientLeft      =   0
+   ClientTop       =   0
+   ClientWidth     =   5925
+   PaletteMode     =   0  'Halftone
+   ScaleHeight     =   3870
+   ScaleWidth      =   5925
+   Begin VB.TextBox Text1 
+      Height          =   2145
+      Left            =   105
+      MultiLine       =   -1  'True
+      ScrollBars      =   3  'Both
+      TabIndex        =   0
+      Text            =   "PropertyPage2.pgx":0000
+      Top             =   1365
+      Width           =   4590
+   End
+   Begin VB.Label Label1 
+      Caption         =   $"PropertyPage2.pgx":0157
+      Height          =   1170
+      Left            =   105
+      TabIndex        =   1
+      Top             =   120
+      Width           =   4575
+   End
+End
+Attribute VB_Name = "PropertyPage2"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = True
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = True
+Option Explicit
+
