@@ -1,0 +1,2 @@
+Important, rename SmartSubClass.jkl to SmartSubClass.dll, then put it in windows system directory and register it, you must have this control for mine to work, if the file is missing or doesn't work download it from www.vbsmart.com
+

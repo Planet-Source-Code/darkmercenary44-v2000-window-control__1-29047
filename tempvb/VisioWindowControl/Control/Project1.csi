@@ -1,0 +1,16 @@
+[History]
+B0=V2000WindowControl/v2000Window/UserControl_ReadProperties
+B1=V2000WindowControl/v2000Window/Image3_MouseUp
+B2=V2000WindowControl/v2000Window/CloseButtonClicked
+B3=V2000WindowControl/v2000Window/DrawTitle
+B4=V2000WindowControl/v2000Window/TitleBar_DblClick
+B5=V2000WindowControl/v2000Window/UserControl_MouseMove
+B6=V2000WindowControl/v2000Window
+B7=V2000WindowControl/v2000Window/TitleBar_MouseDown
+B8=V2000WindowControl/v2000Window/TitleBar_MouseUp
+B9=V2000WindowControl/v2000Window/TitleBar_MouseMove
+B10=V2000WindowControl/v2000Window/Picture1_MouseMove
+B11=V2000WindowControl/v2000Window/KeyDown
+B12=V2000WindowControl/v2000Window/ControlsBorderColor
+B13=V2000WindowControl/v2000Window/Resizable
+B14=V2000WindowControl/v2000Window/TitleBarCaption_MouseMove

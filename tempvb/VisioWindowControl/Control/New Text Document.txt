@@ -1,0 +1,52 @@
+Private Function IWindowsHook_HookProc(ByVal eType As vbalWinHook.EHTHookTypeConstants, ByVal nCode As Long, ByVal wParam As Long, ByVal lParam As Long, bConsume As Boolean) As Long
+
+Select Case wParam
+    Case WM_MOUSEMOVE
+        'Debug.Print "MOUSEMOVE"
+        If (MouselParam(lParam).x * Screen.TwipsPerPixelX) > WERect.Left And _
+        (MouselParam(lParam).x * Screen.TwipsPerPixelX) < WERect.Right And _
+        (MouselParam(lParam).y * Screen.TwipsPerPixelY) > WERect.Top And _
+        (MouselParam(lParam).y * Screen.TwipsPerPixelY) < WERect.Bottom Then
+            IsInRegion = True
+            UserControl.MousePointer = 7
+        Else
+            UserControl.MousePointer = 0
+        End If
+    Case WM_LBUTTONDOWN
+        Dim isinside As Boolean
+        Dim lastbuttonstate As Integer
+        
+        
+        'If Button = 0 Then IsInRegion = False
+        
+        With WERect
+            .Top = (UserControl.Parent.Top + UserControl.Parent.Height) - 90
+            .Left = UserControl.Parent.Left
+            .Right = (UserControl.Parent.Left + UserControl.Parent.Width) - 90
+            .Bottom = (UserControl.Parent.Top + UserControl.Parent.Height)
+        End With
+        
+            If IsInRegion = False Then
+                If (MouselParam(lParam).x * Screen.TwipsPerPixelX) > WERect.Left And _
+                (MouselParam(lParam).x * Screen.TwipsPerPixelX) < WERect.Right And _
+                (MouselParam(lParam).y * Screen.TwipsPerPixelY) > WERect.Top And _
+                (MouselParam(lParam).y * Screen.TwipsPerPixelY) < WERect.Bottom Then
+                    IsInRegion = True
+                    UserControl.MousePointer = 7
+                Else
+                    UserControl.MousePointer = 0
+                End If
+            Else
+                If UserControl.Height >= 1050 Then
+                    With UserControl.Parent
+                        .Height = MouselParam(lParam).y * Screen.TwipsPerPixelY - .Top
+                    End With
+                End If
+                DrawWindow
+            
+            End If
+
+End Select
+
+End Function
+
